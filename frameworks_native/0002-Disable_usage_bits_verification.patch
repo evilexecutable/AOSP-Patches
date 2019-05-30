@@ -1,0 +1,11 @@
+--- libs/ui/Gralloc2.cpp.original	2019-05-30 11:54:19.976328985 +0100
++++ libs/ui/Gralloc2.cpp	2019-05-30 11:54:37.896475599 +0100
+@@ -98,7 +98,7 @@
+     if (descriptorInfo.usage & ~validUsageBits) {
+         ALOGE("buffer descriptor contains invalid usage bits 0x%" PRIx64,
+               descriptorInfo.usage & ~validUsageBits);
+-        return Error::BAD_VALUE;
++        //return Error::BAD_VALUE;
+     }
+     return Error::NONE;
+ }

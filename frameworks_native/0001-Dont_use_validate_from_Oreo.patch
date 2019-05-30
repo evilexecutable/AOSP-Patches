@@ -1,0 +1,11 @@
+--- services/surfaceflinger/DisplayHardware/HWComposer.cpp.Original	2019-05-30 11:48:25.992423495 +0100
++++ services/surfaceflinger/DisplayHardware/HWComposer.cpp	2019-05-30 11:49:06.028959813 +0100
+@@ -435,7 +435,7 @@
+     // The check below is incorrect.  We actually rely on HWC here to fall
+     // back to validate when there is any client layer.
+     displayData.validateWasSkipped = false;
+-    if (!displayData.hasClientComposition) {
++    if ((false)) {
+         sp<android::Fence> outPresentFence;
+         uint32_t state = UINT32_MAX;
+         error = hwcDisplay->presentOrValidate(&numTypes, &numRequests, &outPresentFence , &state);

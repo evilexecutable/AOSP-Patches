@@ -1,0 +1,10 @@
+--- services/surfaceflinger/SurfaceFlinger.h.Original	2019-05-30 12:06:25.303748953 +0100
++++ services/surfaceflinger/SurfaceFlinger.h	2019-05-30 12:06:52.500064265 +0100
+@@ -855,6 +855,7 @@
+ 
+     // Restrict layers to use two buffers in their bufferqueues.
+     bool mLayerTripleBufferingDisabled = false;
++    bool mDamageUsesScreenReference;
+ 
+     // these are thread safe
+     mutable std::unique_ptr<MessageQueue> mEventQueue{std::make_unique<impl::MessageQueue>()};
